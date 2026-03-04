@@ -1,0 +1,302 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F3E8FF;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #ddc3f3;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#img{
+    height: 90%;
+    width: 5%;
+    margin: 1%;
+}
+.logo {
+    font-weight: 700;
+    font-size: 24px; /* Slightly larger */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #141313;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn,
+.btn-outline {
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .3s;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+}
+
+.btn {
+    background: white;
+    color: #6A0DAD;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #141313;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #6A0DAD;
+}
+
+/* Info Sections (Why Stay + Meal / Inclusions + Location) */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.info-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    font-size: 18px; /* Larger font for desktop */
+    line-height: 1.6;
+}
+
+.info-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.info-container ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Room Rates */
+.rates {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.rates h2 {
+    margin-bottom: 40px;
+    color: #4B0082;
+    font-size: 32px; /* Larger and centered above room containers */
+}
+
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.room-column {
+    background: white;
+    border: 2px solid #6A0DAD;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+}
+
+.room-column h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.room-item {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px; /* Slightly larger for desktop */
+}
+
+.room-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #F3E8FF;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+    background: #4B0082;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #6A0DAD;
+    color: white;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lb-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.lb-prev,
+.lb-next {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    transform: translateY(-50%);
+    user-select: none;
+    padding: 10px;
+}
+
+.lb-prev { left: 20px; }
+.lb-next { right: 20px; }
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-container {
+        width: 90%;
+        font-size: 16px; /* keeps phone fonts smaller */
+    }
+
+    .room-column {
+        width: 90%;
+    }
+
+    .room-item {
+        font-size: 16px; /* mobile-friendly */
+    }
+
+    .rates h2 {
+        font-size: 28px;
+    }
+}

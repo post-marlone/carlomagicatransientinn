@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magica & Carlo Transient Inn</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="image/logo.png" alt="logo" id="img">
+    <div class="logo">MAGICA & CARLO</div>
+    <div class="contact-top">Phone #: 0951 323 9000</div>
+
+</header>
+
+<section class="hero fade-in">
+    <div class="hero-text">
+        <h1>Magica & Carlo Transient Inn</h1>
+        <p class="subtitle">Open 24/7 in Malate, Manila</p>
+        <p>Safe. Clean. Budget-friendly. Always ready to assist.</p>
+        <p>Advance payment only upon moving in! No Deposits!</p>
+        <p>All are welcome here!</p>
+        <div class="hero-buttons">
+            <button class="btn" id="reservationBtn">Reservation?</button>
+            <a href="#" class="btn-outline" id="whatsappBtn">WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<div id="reservationModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Reservation Form</h2>
+    <form id="reservationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" required>
+
+        <label for="room">Room Type:</label>
+        <select id="room" required>
+            <option value="Standard Bedspacer Fan">Standard Bedspacer - Fan - 250 per day</option>
+            <option value="Standard Bedspacer Aircon">Standard Bedspacer - Aircon - 300 per day</option>
+            <option value="Few Occupants Fan">Few Occupants - Fan - 300 per day</option>
+            <option value="Few Occupants Aircon">Few Occupants - Aircon - 350 per day</option>
+        </select>
+
+        <label for="message">Message: (Please include here also how many days you intend to stay)</label>
+        <textarea id="message" rows="3"></textarea>
+
+        <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+</div>
+
+<!-- Side-by-side containers: Why Stay + Meal -->
+<section class="info-section fade-in">
+    <div class="info-container">
+        <h2>Why Stay With Us</h2>
+        <ul>
+            <li>Just 1 Valid ID</li>
+            <li>Open 24/7</li>
+            <li>24/7 CCTV Security</li>
+            <li>No Curfew</li>
+            <li>Few Occupants</li>
+        </ul>
+    </div>
+    <div class="info-container">
+        <h2>Home-Style Meal Option</h2>
+        <p>Lunch and dinner available with only ₱100 shared contribution. No meal prep stress. Perfect for workers, students, and OFW applicants.</p>
+    </div>
+</section>
+
+<!-- Room Rates -->
+<section class="rates fade-in">
+    <h2>Room Rates</h2>
+    <div class="room-container">
+        <div class="room-column">
+            <h3>Standard Bedspacer</h3>
+            <div class="room-item">
+                <a href="image/250s.png" class="lightbox">
+                    <img src="image/250s.png" alt="250s" class="room-img">
+                </a>
+                <p>Fan Room - ₱250/day | ₱4,000/month</p>
+            </div>
+            <div class="room-item">
+                <a href="image/300s.png" class="lightbox">
+                    <img src="image/300s.png" alt="300s" class="room-img">
+                </a>
+                <p>Aircon Room - ₱300/day | ₱5,000/month</p>
+            </div>
+        </div>
+        <div class="room-column">
+            <h3>Few Occupants</h3>
+            <div class="room-item">
+                <a href="image/300f.png" class="lightbox">
+                    <img src="image/300f.png" alt="300f" class="room-img">
+                </a>
+                <p>Fan Room - ₱300/day | ₱5,000/month</p>
+            </div>
+            <div class="room-item">
+                <a href="image/350f.png" class="lightbox">
+                    <img src="image/350f.png" alt="350f" class="room-img">
+                </a>
+                <p>Aircon Room - ₱350/day | ₱6,000/month</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Side-by-side containers: Inclusions + Location -->
+<section class="info-section fade-in">
+    <div class="info-container">
+        <h2>Inclusions</h2>
+        <ul>
+            <li>WiFi</li>
+            <li>Water & Electricity</li>
+            <li>Laundry Allowed</li>
+            <li>Cooking Allowed</li>
+            <li>Complete Bed Setup</li>
+            <li>24/7 CCTV</li>
+        </ul>
+    </div>
+    <div class="info-container">
+        <h2>Locations</h2>
+        <p>San Antonio St., Malate, Manila</p>
+    </div>
+</section>
+
+<section class="contact fade-in">
+    <h2>Contact Us</h2>
+    <p>Phone: 0951 323 9000</p>
+    <p>WhatsApp: +63 951 323 9000</p>
+    <p>Email: asdadasdqwds@gmail.com</p>
+    <p>Malate, Manila, Philippines</p>
+</section>
+
+<footer>
+    © 2026 Magica & Carlo Transient Inn | Open 24/7
+</footer>
+
+<!-- Lightbox HTML -->
+<div id="lightboxOverlay" class="lightbox-overlay">
+    <span class="lb-close">&times;</span>
+    <img class="lb-img" src="" alt="">
+    <span class="lb-prev">&#10094;</span>
+    <span class="lb-next">&#10095;</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
