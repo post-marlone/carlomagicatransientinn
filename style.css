@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: #ddc3f3;
     color: white;
@@ -21,17 +19,18 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-#img{
+
+#img {
     height: 90%;
     width: 5%;
     margin: 1%;
 }
+
 .logo {
     font-weight: 700;
-    font-size: 24px; /* Slightly larger */
+    font-size: 24px;
 }
 
-/* Hero Section */
 .hero {
     background-image: url(background.jpg);
     background-size: cover;
@@ -51,7 +50,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Buttons */
 .btn,
 .btn-outline {
     padding: 12px 25px;
@@ -84,36 +82,6 @@ header {
     color: #6A0DAD;
 }
 
-/* Info Sections (Why Stay + Meal / Inclusions + Location) */
-.info-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 60px 20px;
-}
-
-.info-container {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: 400px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    font-size: 18px; /* Larger font for desktop */
-    line-height: 1.6;
-}
-
-.info-container h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.info-container ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-/* Room Rates */
 .rates {
     padding: 80px 20px;
     text-align: center;
@@ -122,7 +90,7 @@ header {
 .rates h2 {
     margin-bottom: 40px;
     color: #4B0082;
-    font-size: 32px; /* Larger and centered above room containers */
+    font-size: 32px;
 }
 
 .room-container {
@@ -148,7 +116,7 @@ header {
 .room-item {
     margin-bottom: 20px;
     text-align: center;
-    font-size: 18px; /* Slightly larger for desktop */
+    font-size: 18px;
 }
 
 .room-item img {
@@ -157,7 +125,6 @@ header {
     cursor: pointer;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -167,12 +134,11 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-    background-color: #F3E8FF;
+    background: #F3E8FF;
     margin: auto;
     padding: 20px;
     border-radius: 15px;
@@ -196,19 +162,9 @@ header {
     top: 10px;
     right: 20px;
     font-size: 28px;
-    font-weight: bold;
     cursor: pointer;
 }
 
-/* Contact Section */
-.contact {
-    background: #4B0082;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -216,19 +172,6 @@ footer {
     color: white;
 }
 
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Lightbox */
 .lightbox-overlay {
     display: none;
     position: fixed;
@@ -236,7 +179,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -265,38 +208,13 @@ footer {
     color: white;
     cursor: pointer;
     transform: translateY(-50%);
-    user-select: none;
     padding: 10px;
 }
 
-.lb-prev { left: 20px; }
-.lb-next { right: 20px; }
+.lb-prev {
+    left: 20px;
+}
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .info-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info-container {
-        width: 90%;
-        font-size: 16px; /* keeps phone fonts smaller */
-    }
-
-    .room-column {
-        width: 90%;
-    }
-
-    .room-item {
-        font-size: 16px; /* mobile-friendly */
-    }
-
-    .rates h2 {
-        font-size: 28px;
-    }
+.lb-next {
+    right: 20px;
 }
